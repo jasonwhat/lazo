@@ -5,7 +5,7 @@
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
-<header class="main-header post-head {{#if image}}" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url({{image}}){{else}}no-cover{{/if}}">
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
         {{else}}<a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>{{/if}}
@@ -22,7 +22,10 @@
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
                 <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+<<<<<<< HEAD
                 <a class="disqus-comments-no" href="{{@blog.url}}{{url}}#disqus_thread" data-disqus-identifier="{{id}}"></a>
+=======
+>>>>>>> upstream/master
             </section>
         </header>
 
@@ -85,6 +88,7 @@
 
         </footer>
 
+<<<<<<< HEAD
         <div id="disqus_thread"></div>
         <script>
             /**
@@ -106,6 +110,8 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+=======
+>>>>>>> upstream/master
     </article>
 </main>
 
