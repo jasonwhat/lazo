@@ -610,7 +610,7 @@ body.nav-opened .site-wrapper {
     background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
-    background-position: 50% 20%;
+    /*background-position: 50% 20%;*/
 }
 
 .main-header .inner {
