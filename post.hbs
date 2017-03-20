@@ -22,10 +22,7 @@
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
                 <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-<<<<<<< HEAD
-                <a class="disqus-comments-no" href="{{@blog.url}}{{url}}#disqus_thread" data-disqus-identifier="{{id}}"></a>
-=======
->>>>>>> upstream/master
+                <a class="disqus-comment-count" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{id}}"></a>
             </section>
         </header>
 
@@ -87,31 +84,22 @@
             {{/if}}
 
         </footer>
-
-<<<<<<< HEAD
         <div id="disqus_thread"></div>
         <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            /*
-            var disqus_config = function () {
-                this.page.url = '{{url absolute="true"}}';  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = 'ghost-{{id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                this.page.title = '{{title}}';
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = '//EXAMPLE.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        var disqus_config = function () {
+        this.page.identifier = 'ghost-{{id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://EXAMPLE.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-=======
->>>>>>> upstream/master
     </article>
 </main>
 
