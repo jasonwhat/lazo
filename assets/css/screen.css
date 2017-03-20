@@ -604,7 +604,7 @@ body.nav-opened .site-wrapper {
     position: relative;
     display: table;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     margin-bottom: 5rem;
     text-align: center;
     background: #222 no-repeat center center;
@@ -1110,7 +1110,7 @@ body.nav-opened .nav {
 
 .no-cover.main-header {
     min-height: 160px;
-    max-height: 45vh;
+    max-height: 40vh;
     background: #f5f8fa;
 }
 
@@ -1449,7 +1449,7 @@ body.page-template .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 55vh;
+    height: 40vh;
     min-height: 180px;
     background-position: 50% 50% !important;
 }
@@ -1462,12 +1462,12 @@ body.page-template .post-title {
 }
 
 .tag-head.main-header {
-    height: 55vh;
+    height: 40vh;
     min-height: 180px;
 }
 
 .author-head.main-header {
-    height: 55vh;
+    height: 40vh;
     min-height: 180px;
 }
 
@@ -1804,7 +1804,7 @@ body.page-template .post-title {
 
 /* On page2+ make all the headers smaller */
 .paged .main-header {
-    max-height: 55vh;
+    max-height: 40vh;
 }
 
 /* On page2+ show extra pagination controls at the top of post list */
@@ -1925,8 +1925,8 @@ body.page-template .post-title {
         box-sizing: border-box;
         height: auto;
         min-height: 240px;
-        height: 45vh;
-        padding: 15% 0;
+        height: 35vh;
+        /*padding: 15% 0;*/
     }
 
     .scroll-down,
@@ -2071,11 +2071,11 @@ body.page-template .post-title {
 
     .main-header {
         margin-bottom: 15px;
-        height: 40vh;
+        height: 20vh;
     }
 
     .no-cover.main-header {
-        height: 30vh;
+        height: 20vh;
     }
 
     .paged .main-header {
@@ -2368,9 +2368,9 @@ body.page-template .post-title {
         font-size: 1.4rem;
     }
 
-    .paged .main-header .page-description {
+    /*.paged .main-header .page-description {
         display: none;
-    }
+    }*/
 
     .gh-subscribe {
         padding: 15px;
