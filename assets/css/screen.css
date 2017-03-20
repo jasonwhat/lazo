@@ -1212,7 +1212,7 @@ body.page-template .post-title {
     text-decoration: underline;
 }
 
-.disqus-comments-no {
+.disqus-comment-count {
     border-left: #d5dbde 1px solid;
     display: inline-block;
     margin-left: 8px; 
