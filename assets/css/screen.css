@@ -148,7 +148,10 @@ td, th{ padding: 0; }
     content: "\f604";
 }
 .icon-arrow-left:before {
-    content: "\f605";
+  font-family: 'FontAwesome';
+  content: "\f112";
+  margin-right: 7px !important;
+  margin-left: 1px;
 }
 .icon-stats:before {
     content: "\f606";
@@ -192,7 +195,7 @@ body {
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     /* Disabled because it seems there is a bug in Chrome that makes the button
-       font very ugly when this is turned on and a background image is used. 
+       font very ugly when this is turned on and a background image is used.
        Will file a bug with either Ghost or Chrome to find a better solution
     text-rendering: geometricPrecision;*/
 }
@@ -315,7 +318,8 @@ blockquote {
     box-sizing: border-box;
     margin: 1.75em 0 1.75em -2.2em;
     padding: 0 0 0 1.75em;
-    border-left: #4A4A4A 0.4em solid;
+    /*border-left: #4A4A4A 0.4em solid;*/
+    border-left: #235687 0.4em solid;
 }
 
 blockquote p {
@@ -589,6 +593,10 @@ body.nav-opened .site-wrapper {
 .footnotes {
     font-size: 1.3rem;
     line-height: 1.8em;
+    border-top: #EFEFEF 1px dotted;
+    margin: 3.2em 0;
+    padding: 0;
+    padding-top: 15px;
 }
 
 .footnotes ol li {
@@ -604,7 +612,7 @@ body.nav-opened .site-wrapper {
     position: relative;
     display: table;
     width: 100%;
-    height: 45vh;
+    height: 40vh;
     margin-bottom: 5rem;
     text-align: center;
     background: #222 no-repeat center center;
@@ -869,26 +877,26 @@ body.nav-opened .nav {
     width: auto;
 }
 
-.back-button {                                                                      
-    -webkit-box-sizing: border-box;                                                 
-    -moz-box-sizing: border-box;                                                    
-    box-sizing: border-box;                                                         
-    display: inline-block;                                                          
+.back-button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
     color: #fff;
-    float: left;                                                                   
-    height: 38px;                                                                   
-    padding: 0 15px;                                                                
-    border-style: solid;                                                            
-    border-width: 1px;                                                              
-    opacity: 1;                                                                     
-    text-align: center;                                                             
-    font-size: 12px;                                                                
-    text-transform: uppercase;                                                      
-    line-height: 35px;                                                              
-    white-space: nowrap;                                                            
-    border-radius: 3px;                                                             
-    transition: all 0.5s ease;                                                      
-}     
+    float: right;
+    height: 38px;
+    padding: 0 15px;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 1;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 35px;
+    white-space: nowrap;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
 
 /*.no-cover .back-button {
     -webkit-box-sizing: border-box;
@@ -911,10 +919,11 @@ body.nav-opened .nav {
 }*/
 
 .back-button:before {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     margin-right: 6px;
     position: relative;
+    top: 1px;
 }
 
 .no-cover .back-button {
@@ -1009,56 +1018,56 @@ body.nav-opened .nav {
     background: none;
 }
 
-/* Styles for the additional home button */                                     
-.home-button {                                                                  
-    -webkit-box-sizing: border-box;                                             
-    -moz-box-sizing: border-box;                                                
-    box-sizing: border-box;                                                     
-    display: inline-block;                                                      
-    float: left;                                                                
-    height: 38px;                                                               
-    padding: 0 15px;                                                            
-    border-style: solid;                                                        
-    border-width: 1px;                                                          
-    opacity: 1;                                                                 
-    text-align: center;                                                         
-    font-size: 12px;                                                            
-    text-transform: uppercase;                                                  
-    line-height: 35px;                                                          
-    white-space: nowrap;                                                        
-    border-radius: 3px;                                                         
-    transition: all 0.5s ease;                                                  
+/* Styles for the additional home button */
+.home-button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    height: 38px;
+    padding: 0 15px;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 1;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 35px;
+    white-space: nowrap;
+    border-radius: 3px;
+    transition: all 0.5s ease;
     color: #fff;
     border-color: rgba(255,255,255,0.6);
-}                                                                               
-                                                                                
-.home-button:before {                                                           
-    font-size: 12px;                                                            
-    margin-right: 6px;                                                          
-    top: 1px;                                                                   
-}                                                                               
-                                                                                
-.home-button:hover {                                                            
-    background: #fff;                                                           
-}                                                                               
-                                                                                
-.home-button:focus {                                                            
-    outline: 0;                                                                 
-}  
+}
+
+.home-button:before {
+    font-size: 12px;
+    margin-right: 6px;
+    top: 1px;
+}
+
+.home-button:hover {
+    background: #fff;
+}
+
+.home-button:focus {
+    outline: 0;
+}
 
 .no-cover .home-button {
-    border-color: #BFC8CD;                                                          
-    color: #9EABB3;                                                                 
-}  
+    border-color: #BFC8CD;
+    color: #9EABB3;
+}
 
 .no-cover .home-button:hover {
-    border-color: #555;                                                         
-    color: #555; 
+    border-color: #555;
+    color: #555;
 }
 
 .no-cover .main-nav.overlay .home-button:hover {
-    border-color: #555;                                                         
-    color: #555; 
+    border-color: #555;
+    color: #555;
 }
 
 /* Styles for the additional back button */
@@ -1095,7 +1104,7 @@ body.nav-opened .nav {
 
 .no-cover.main-header {
     min-height: 160px;
-    max-height: 45vh;
+    max-height: 40vh;
     background: #f5f8fa;
 }
 
@@ -1167,6 +1176,27 @@ body.page-template .post-title {
     line-height: 1.7em;
 }
 
+.tag-link .post-excerpt p {
+  margin-bottom: 1.75em;
+}
+
+.tag-link .post-excerpt p a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.6rem;
+  font-weight: bold;
+  line-height: 1.15em;
+  letter-spacing: -1px;
+  text-rendering: geometricPrecision;
+  text-decoration: none;
+  /*margin: 0 0 0.4em 0;*/
+  color: #4A4A4A;
+  transition: color 0.3s ease;
+}
+
+.tag-link .post-excerpt p a:hover {
+  color: #111;
+}
+
 .read-more {
     text-decoration: none;
 }
@@ -1175,9 +1205,10 @@ body.page-template .post-title {
     display: block;
     margin: 1.75rem 0 0 0;
     font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 2.2rem;
     color: #9EABB3;
+    text-transform: uppercase;
 }
 
 .author-thumb {
@@ -1189,22 +1220,46 @@ body.page-template .post-title {
 }
 
 .post-meta a {
-    color: #9EABB3;
-    text-decoration: none;
+  color: #9EABB3;
+  text-decoration: none;
 }
 
 .post-meta a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+.post-meta .post-type {
+  display: inline-block;
+}
+
+.postlist-tags a {
+  padding: 0 4px;
+  display: inline-block;
+  border: #bfc8cd 1px solid;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #9EABB3;
+  transition: all 0.2s ease;
+  line-height: 1.75em;
+}
+
+.postlist-tags a:hover {
+  color: #889093;
+  border-color: #98a0a4;
+  text-decoration: none;
 }
 
 .disqus-comment-count {
-    border-left: #d5dbde 1px solid;
     display: inline-block;
-    margin-left: 8px; 
-    padding-left: 12px;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
+}
+
+.disqus-comment-count-loop {
+  display: inline-block;
+  font-size: 1.3rem;
+  white-space: nowrap;
 }
 
 .user-meta {
@@ -1215,10 +1270,6 @@ body.page-template .post-title {
 
 .post-date {
     display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
-    border-left: #d5dbde 1px solid;
-    text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
 }
@@ -1272,7 +1323,7 @@ body.page-template .post-title {
 
 .post-template .post-title,
 .page-template .post-title {
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .post-template .post-meta,
@@ -1434,7 +1485,7 @@ body.page-template .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 45vh;
+    height: 40vh;
     min-height: 180px;
     background-position: 50% 50% !important;
 }
@@ -1447,12 +1498,12 @@ body.page-template .post-title {
 }
 
 .tag-head.main-header {
-    height: 45vh;
+    height: 40vh;
     min-height: 180px;
 }
 
 .author-head.main-header {
-    height: 45vh;
+    height: 40vh;
     min-height: 180px;
 }
 
@@ -1789,7 +1840,7 @@ body.page-template .post-title {
 
 /* On page2+ make all the headers smaller */
 .paged .main-header {
-    max-height: 45vh;
+    max-height: 40vh;
 }
 
 /* On page2+ show extra pagination controls at the top of post list */
@@ -1998,7 +2049,7 @@ body.page-template .post-title {
     }
 
     .post-head.main-header {
-        height:45vh;
+        height:40vh;
     }
 
     .tag-head.main-header,
