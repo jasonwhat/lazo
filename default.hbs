@@ -44,6 +44,21 @@
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     {{! Prism.js JavaScript file }}
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
+    {{! Adding Ghost Hunter Search Enginer --}}
+    <script type="text/javascript" src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
+    <script>
+      var searchField = $("#search-field").ghostHunter({
+        results:"#search-results",
+        onKeyUp:true,
+        includepages:true,
+        onPageLoad: true,
+        zeroResultsInfo: false
+      });
+      function clearResults() {
+        searchField.clear();
+      }
+    </script>
+    {{! Adding Disqus counter --}}
     <script id="dsq-count-scr" src="//EXAMPLE.disqus.com/count.js" async></script>
   </body>
 </html>
