@@ -1,26 +1,59 @@
 {{!-- Previous/next page links - only displayed on page 2+ --}}
 <div class="extra-pagination inner">
-    {{pagination}}
+  {{pagination}}
 </div>
-
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
-<article class="{{post_class}}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
-        {{author}}
-        {{tags prefix=" on "}}
-        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-        <a class="disqus-comment-count" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{id}}"></a>
-    </footer>
-</article>
+  <article class="{{post_class}}">
+    {{!-- If the post is a link --}}
+    {{#has tag="link"}}
+      <section class="post-excerpt">
+        {{content}}
+      </section>
+      <footer class="post-meta">
+        <span class='post-type'><i class="fa fa-external-link"></i>&nbsp;<a href="{{url}}">Link</a></span>&nbsp;|&nbsp;<i class="fa fa-tags" aria-hidden="true"></i>&nbsp;<span class='postlist-tags'>{{tags separator=" " suffix=" | "}}</span>
+        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>&nbsp;|
+        <a class="disqus-comment-count-loop" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{id}}"></a>
+    {{else}}
+      {{!-- If the post is a twitter like post-it quick post --}}
+      {{#has tag="post-it"}}
+      <header class="post-header">
+        <h2 class="post-title"><a href="{{url}}">{{title}}{{#if featured}} <i class="fa fa-star" aria-hidden="true"></i>{{/if}}</a></h2>
+      </header>
+      <section class="post-excerpt">
+        {{content}}
+      </section>
+      <footer class="post-meta">
+        <span class='post-type'><i class="fa fa-comment-o"></i>&nbsp;Post-It</span>{{#if featured}}&nbsp;<i class="fa fa-star" aria-hidden="true"></i>{{/if}}&nbsp;|&nbsp;<i class="fa fa-tags" aria-hidden="true"></i>&nbsp;<span class='postlist-tags'>{{tags separator=" " suffix=" | "}}</span>
+        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>&nbsp;|
+        <a class="disqus-comment-count-loop" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{id}}"></a>
+      {{else}}
+        {{!-- If the post is a quote --}}
+        {{#has tag="quote"}}
+          <section class="post-excerpt">
+            {{content}}
+          </section>
+          <footer class="post-meta">
+            <span class='post-type'><a href="{{url}}"><i class="fa fa-quote-right"></i> Quote</a></span><i class="fa fa-tags" aria-hidden="true"></i>&nbsp;<span class='postlist-tags'>{{tags separator=" " suffix=" | "}}</span>
+            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>&nbsp;|
+            <a class="disqus-comment-count-loop" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{id}}"></a>
+        {{!-- If the post is just a normal post --}}
+        {{else}}
+          <header class="post-header">
+            <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+          </header>
+          <section class="post-excerpt">
+            <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+          </section>
+          <footer class="post-meta">
+            <span class='post-type'><i class="fa fa-file-text-o"></i>&nbsp;Post</span>{{#if featured}}&nbsp;<i class="fa fa-star" aria-hidden="true"></i>{{/if}}&nbsp;|&nbsp;<i class="fa fa-tags" aria-hidden="true"></i>&nbsp;<span class='postlist-tags'>{{tags separator=" " suffix=" | "}}</span>
+            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>&nbsp;|
+            <a class="disqus-comment-count-loop" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{id}}"></a>
+        {{/has}}
+      {{/has}}
+    {{/has}}
+      </footer>
+  </article>
 {{/foreach}}
-
 {{!-- Previous/next page links - displayed on every page --}}
 {{pagination}}
