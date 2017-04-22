@@ -570,7 +570,7 @@ button {
 }
 
 body.nav-opened .site-wrapper {
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     -webkit-transform: translate3D(-240px, 0, 0);
         -ms-transform: translate3D(-240px, 0, 0);
             transform: translate3D(-240px, 0, 0);
